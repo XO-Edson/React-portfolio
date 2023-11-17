@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +33,7 @@ body {
   height: 100%;
   background-color: var(--DARK-GREEN);
   color: var(--WHITE);
+  font-family: "Lato", sans-serif;
 }
 
 #root {
@@ -51,9 +54,72 @@ ul {
   column-gap: 1rem;
 }
 
+header li {
+  cursor: pointer;
+}
+
 /* HERO */
 .hero {
   height: 70vh;
   display: grid;
   place-content: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: var(--PALE-GREEN);
+}
+
+/* ABOUT */
+.about {
+  text-align: justify;
+  height: 50vh;
+}
+
+/* SKILLS */
+.skills {
+  text-align: center;
+  height: 50vh;
+}
+
+.skills p {
+  margin-bottom: 2rem;
+}
+
+.skills .icon {
+  font-size: 5rem;
+}
+
+.languages {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* CONTACT */
+
+.contact {
+  height: 70vh;
+  width: 100%;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 80%;
+  display: block;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
 }
