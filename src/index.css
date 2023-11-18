@@ -71,6 +71,7 @@ header li {
   height: 70vh;
   display: grid;
   place-content: center;
+  display: block;
 }
 
 h1 {
