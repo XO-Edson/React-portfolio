@@ -10,7 +10,7 @@ export const Contact = () => {
         <form action="">
           <input type="text" placeholder="Name" />
           <input type="email" placeholder="Enter email" />
-          <input type="textbox" placeholder="Your Message" />
+          <textarea type="text" placeholder="Your Message"></textarea>
           <button>SEND</button>
         </form>
       </div>

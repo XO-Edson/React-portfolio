@@ -1,5 +1,6 @@
 import { About } from "./About";
 import { Contact } from "./Contact";
+import { Footer } from "./Footer";
 import { HeroSection } from "./HeroSection";
 import { Navabar } from "./Navabar";
 import { Skills } from "./Skills";
@@ -13,6 +14,7 @@ function App() {
       <Skills />
 
       <Contact />
+      <Footer />
     </div>
   );
 }
