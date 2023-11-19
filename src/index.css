@@ -5,6 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   /* color scheme 1 */
@@ -20,7 +23,7 @@
   --BLUE: #2d7bd8;
   --PALE-BLUE: #d0e7fe;
   --DARK-BLUE2: #0d2237;
-  --ORANGE: #ff842b;
+  --ORANGE: #dc742a;
 
   /* COLOR SCHEME 3 */
   --DARK-GREEN: #13282b;
@@ -37,7 +40,7 @@ body {
 }
 
 #root {
-  margin: 2rem auto;
+  margin: 0rem auto 1rem auto;
 }
 
 section {
@@ -48,36 +51,75 @@ section {
 
 /* NAVBAR */
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 1;
 }
 
 ul {
   list-style: none;
   display: flex;
-  column-gap: 1rem;
+  column-gap: 3rem;
 }
 
 header li {
   cursor: pointer;
+  font-weight: bold;
+  color: var(--PALE-GREEN);
+  padding-bottom: 3px;
+}
+
+header li:hover {
+  color: var(--LIGHT-CYAN);
+  border-bottom: 1px solid #90ee90;
+}
+
+li a {
+  text-decoration: none;
+  color: var(--WHITE);
+}
+
+a:active {
+  color: var(--WHITE);
+}
+
+a:visited {
+  color: var(--WHITE);
 }
 
 /* HERO */
 .hero {
-  height: 70vh;
+  height: 100vh;
+  width: 100%;
   display: grid;
   place-content: center;
-  display: block;
+  position: relative;
+  background-image: url(./img/santiago-gomez-WpZmGDzOAi0-unsplash.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--DARK-GREEN);
+  mix-blend-mode: lighten;
 }
 
 h1 {
   margin-bottom: 1rem;
   /* color: var(--PALE-GREEN); */
-  color: #3b8ea5; /* new color on trial */
+  color: #90ee90; /* new color on trial */
 }
 
 /* ABOUT */
@@ -111,35 +153,87 @@ h1 {
   justify-content: space-around;
 }
 
+/* PROJECTS */
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-preview-img img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
 /* CONTACT */
 
-.contact {
-  height: 70vh;
+.contact-container {
+  background-color: var(--LIGHT-GREEN);
   width: 100%;
-  text-align: center;
+}
+
+.contact {
+  height: 50vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #3b8ea5;
+}
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 form {
+  width: 50%;
+  text-align: right;
+}
+
+.personal-info {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  column-gap: 0.5rem;
 }
 
 input,
 textarea {
-  width: 50%;
-  display: block;
+  width: 100%;
+  color: var(--WHITE);
   padding: 0.5rem;
   border: none;
   outline: none;
   margin-bottom: 0.5rem;
   font-family: inherit;
+  resize: none;
+  background-color: rgba(185, 185, 185, 0.3);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--PALE-BLUE);
 }
 
 button {
   padding: 0.5rem 1.5rem;
   border: none;
   outline: none;
+  background-color: #3b8ea5;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--WHITE);
+}
+
+button:hover {
+  background-color: #90ee90;
+  color: var(--DARK-GREEN);
 }
 
 /* FOOTER */
@@ -148,10 +242,14 @@ footer {
   display: grid;
   place-content: center;
   text-align: center;
+  margin-top: 1rem;
 }
 
 footer .icon {
   font-size: 2rem;
   margin-right: 0.5rem;
   color: #3b8ea5;
+}
+
+@media screen and (max-width: 450px) {
 }

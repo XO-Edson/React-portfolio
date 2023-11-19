@@ -9,7 +9,7 @@ import { faGitAlt } from "@fortawesome/free-brands-svg-icons";
 export const Skills = () => {
   return (
     <div className="skills-container">
-      <section className="skills">
+      <section className="skills" id="skills">
         <h1>SKILLS</h1>
 
         <p>
