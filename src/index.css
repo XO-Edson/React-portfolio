@@ -68,10 +68,26 @@ header li {
 
 /* HERO */
 .hero {
-  height: 70vh;
+  height: 100vh;
+  width: 100%;
   display: grid;
   place-content: center;
-  display: block;
+  z-index: 1;
+  position: relative;
+  background-image: url(./img/santiago-gomez-WpZmGDzOAi0-unsplash.jpg);
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--DARK-GREEN);
+  mix-blend-mode: lighten;
 }
 
 h1 {
@@ -114,26 +130,39 @@ h1 {
 /* CONTACT */
 
 .contact {
-  height: 70vh;
+  height: 50vh;
   width: 100%;
-  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+}
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 form {
+  width: 50%;
+  text-align: right;
+}
+
+.personal-info {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  column-gap: 0.5rem;
 }
 
 input,
 textarea {
-  width: 50%;
-  display: block;
+  width: 100%;
+
   padding: 0.5rem;
   border: none;
   outline: none;
   margin-bottom: 0.5rem;
   font-family: inherit;
+  resize: none;
 }
 
 button {
