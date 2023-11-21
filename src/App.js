@@ -16,7 +16,10 @@ function App() {
       <HeroSection />
       <About />
       <Skills />
+<<<<<<< HEAD
       <Projects />
+=======
+>>>>>>> 518f247626ee9d63c85c5789b50c6982c3446a58
       <Contact data={data} setData={setData} />
       <Footer />
     </div>
