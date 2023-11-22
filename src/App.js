@@ -9,10 +9,11 @@ import { Projects } from "./Projects";
 
 function App() {
   const [data, setData] = useState({ name: "", email: "", message: "" });
+  const [active, setActive] = useState(false);
 
   return (
     <div className="App">
-      <Navabar />
+      <Navabar active={active} setActive={setActive} />
       <HeroSection />
       <About />
       <Skills />

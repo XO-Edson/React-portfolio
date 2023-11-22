@@ -6,6 +6,7 @@ export const Projects = () => {
     <section className="projects">
       <h1>PROJECTS</h1>
       <div className="project-container" id="projects">
+        <h2>PROJECT ONE</h2>
         <div className="project">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
@@ -17,8 +18,9 @@ export const Projects = () => {
             <img src={project1} alt="" />
           </div>
         </div>
+        <h2>PROJECT TWO</h2>
         <div className="project">
-          <div className="project-preview-img">
+          <div className="project-preview-img alt">
             <img src={project1} alt="" />
           </div>
           <p>
@@ -28,6 +30,7 @@ export const Projects = () => {
             molestiae neque rerum?
           </p>
         </div>
+        <h2>PROJECT THREE</h2>
         <div className="project">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt

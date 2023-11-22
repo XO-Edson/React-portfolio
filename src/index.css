@@ -49,6 +49,10 @@ section {
   padding: 1.5rem;
 }
 
+.hamburger {
+  display: none;
+}
+
 /* NAVBAR */
 header {
   width: 100%;
@@ -125,7 +129,7 @@ h1 {
 /* ABOUT */
 .about {
   text-align: justify;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 /* SKILLS */
@@ -137,7 +141,7 @@ h1 {
 
 .skills {
   text-align: center;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .skills p {
@@ -151,6 +155,8 @@ h1 {
 .languages {
   display: flex;
   justify-content: space-around;
+  column-gap: 2rem;
+  margin-top: 5rem;
 }
 
 /* PROJECTS */
@@ -251,5 +257,82 @@ footer .icon {
   color: #3b8ea5;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
+  /* HEADER */
+  .no-scroll {
+    overflow: hidden;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .menu-bg {
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  /* HAMBURGER MENU */
+
+  .hamburger {
+    display: block;
+    z-index: 1;
+  }
+
+  .bar {
+    width: 2rem;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 0.5rem;
+  }
+
+  .bar.mid {
+    width: 1.25rem;
+  }
+
+  .hamburger.active .bar.mid {
+    display: none;
+  }
+
+  .hamburger.active .bar:first-child {
+    transform: rotate(-45deg) translateY(12px) translateX(-6px);
+  }
+
+  .hamburger.active .bar:last-child {
+    transform: rotate(45deg) translateY(-12px) translateX(-6px);
+  }
+
+  /* SKILLS */
+  .languages {
+    flex-wrap: wrap;
+  }
+
+  /* PROJECCTS */
+  .project {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .project .alt {
+    grid-row: 2/3;
+  }
+
+  /* CONTACT */
+  .form-container {
+    flex-direction: column;
+  }
+
+  form {
+    width: 100%;
+  }
 }
