@@ -182,7 +182,7 @@ h1 {
 }
 
 .contact {
-  height: 50vh;
+  min-height: 50vh;
   width: 100%;
 
   display: flex;
