@@ -269,17 +269,26 @@ footer .icon {
 
   .menu-bg {
     position: absolute;
-    background-color: hsla(0, 0%, 100%, 0.5);
+    background-color: hsl(188, 39%, 12%);
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 0vh;
     width: 100%;
     display: grid;
     place-content: center;
+    transition: height 0.3s ease-in-out;
+  }
+
+  .menu-bg-active {
+    height: 100vh;
   }
 
   ul {
     flex-direction: column;
+  }
+
+  li {
+    margin-top: 2rem;
   }
 
   /* HAMBURGER MENU */
@@ -287,17 +296,21 @@ footer .icon {
   .hamburger {
     display: block;
     z-index: 1;
+    display: grid;
+    place-content: center;
+    padding: 0.5rem;
   }
 
   .bar {
-    width: 2rem;
+    width: 1.5rem;
     height: 3px;
-    background-color: black;
-    margin-bottom: 0.5rem;
+    background-color: var(--PALE-GREEN);
+    margin-bottom: 0.25rem;
+    transition: 0.2s ease-in;
   }
 
   .bar.mid {
-    width: 1.25rem;
+    width: 0.75rem;
   }
 
   .hamburger.active .bar.mid {
@@ -305,11 +318,11 @@ footer .icon {
   }
 
   .hamburger.active .bar:first-child {
-    transform: rotate(-45deg) translateY(12px) translateX(-6px);
+    transform: rotate(-45deg) translateY(6px) translateX(1.5px);
   }
 
   .hamburger.active .bar:last-child {
-    transform: rotate(45deg) translateY(-12px) translateX(-6px);
+    transform: rotate(45deg) translateY(-6px) translateX(1.5px);
   }
 
   /* SKILLS */

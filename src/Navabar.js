@@ -11,30 +11,40 @@ export const Navabar = ({ active, setActive }) => {
         <p>EDSON.DEV</p>
       </div>
       <div
-        className="menu-bg"
+        className={`menu-bg ${active ? "menu-bg-active" : ""}`}
         style={{ visibility: active ? "visible" : "hidden" }}
       >
         <ul>
           <li>
-            <a href="#home">HOME</a>
+            <a href="#home" onClick={toggleHamburger}>
+              HOME
+            </a>
           </li>
           <li>
-            <a href="#about">ABOUT</a>
+            <a href="#about" onClick={toggleHamburger}>
+              ABOUT
+            </a>
           </li>
           <li>
-            <a href="#skills">SKILLS</a>
+            <a href="#skills" onClick={toggleHamburger}>
+              SKILLS
+            </a>
           </li>
           <li>
-            <a href="#projects">PROJECTS</a>
+            <a href="#projects" onClick={toggleHamburger}>
+              PROJECTS
+            </a>
           </li>
           <li>
             {" "}
-            <a href="#contact">CONTACT</a>
+            <a href="#contact" onClick={toggleHamburger}>
+              CONTACT
+            </a>
           </li>
         </ul>
       </div>
       <div
-        className={`hamburger ${active ? "active" : "hamburger"}`}
+        className={`hamburger ${active ? "active" : ""}`}
         onClick={toggleHamburger}
       >
         <div className="bar"></div>
