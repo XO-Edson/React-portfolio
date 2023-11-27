@@ -168,6 +168,22 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+.project-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project button {
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project p {
+  margin-bottom: 1rem;
+}
+
 .project-preview-img img {
   object-fit: contain;
   width: 100%;
@@ -189,9 +205,15 @@ h1 {
   flex-direction: column;
 }
 
+.contact p {
+  margin-bottom: 1rem;
+}
+
 h2 {
   color: #3b8ea5;
+  margin-bottom: 1rem;
 }
+
 .form-container {
   width: 100%;
   display: flex;
@@ -265,6 +287,8 @@ footer .icon {
 
   header {
     justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
   }
 
   .menu-bg {
@@ -274,9 +298,7 @@ footer .icon {
     left: 0;
     height: 0vh;
     width: 100%;
-    display: grid;
-    place-content: center;
-    transition: height 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
   }
 
   .menu-bg-active {
@@ -285,6 +307,14 @@ footer .icon {
 
   ul {
     flex-direction: column;
+    z-index: 1;
+    align-self: center;
+    visibility: hidden;
+    transition: visibility 0.3s ease-in-out;
+  }
+
+  .ul-active {
+    visibility: visible;
   }
 
   li {

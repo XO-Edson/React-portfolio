@@ -5,7 +5,7 @@ export const HeroSection = () => {
     <div className="hero" id="home">
       <p>Hi, I'm</p>
       <h1>EDSON OCHIENG</h1>
-      <p>a React FRONTEND DEVELOPER</p>
+      <p>Unveiling the Artistry of Frontend Development.</p>
     </div>
   );
 };

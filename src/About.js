@@ -16,10 +16,9 @@ export const About = () => {
         principles, an appreciation for clean code architecture, and a
         commitment to staying abreast of emerging trends in frontend
         development. When I'm not immersed in code, you'll find me exploring new
-        libraries, tinkering with animations, or engaging with the vibrant
-        developer community to share insights and learnings. Let's collaborate
-        and transform your ideas into visually stunning and high-performing web
-        solutions!
+        libraries, tinkering with animations, or exploring the vibrant developer
+        community to gather insights and learnings. Let's connect and transform
+        ideas into visually stunning and high-performing web solutions!
       </p>
     </section>
   );

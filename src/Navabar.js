@@ -13,36 +13,37 @@ export const Navabar = ({ active, setActive }) => {
       <div
         className={`menu-bg ${active ? "menu-bg-active" : ""}`}
         style={{ visibility: active ? "visible" : "hidden" }}
-      >
-        <ul>
-          <li>
-            <a href="#home" onClick={toggleHamburger}>
-              HOME
-            </a>
-          </li>
-          <li>
-            <a href="#about" onClick={toggleHamburger}>
-              ABOUT
-            </a>
-          </li>
-          <li>
-            <a href="#skills" onClick={toggleHamburger}>
-              SKILLS
-            </a>
-          </li>
-          <li>
-            <a href="#projects" onClick={toggleHamburger}>
-              PROJECTS
-            </a>
-          </li>
-          <li>
-            {" "}
-            <a href="#contact" onClick={toggleHamburger}>
-              CONTACT
-            </a>
-          </li>
-        </ul>
-      </div>
+      ></div>
+
+      <ul className={`${active ? "ul-active" : ""}`}>
+        <li>
+          <a href="#home" onClick={toggleHamburger}>
+            HOME
+          </a>
+        </li>
+        <li>
+          <a href="#about" onClick={toggleHamburger}>
+            ABOUT
+          </a>
+        </li>
+        <li>
+          <a href="#skills" onClick={toggleHamburger}>
+            SKILLS
+          </a>
+        </li>
+        <li>
+          <a href="#projects" onClick={toggleHamburger}>
+            PROJECTS
+          </a>
+        </li>
+        <li>
+          {" "}
+          <a href="#contact" onClick={toggleHamburger}>
+            CONTACT
+          </a>
+        </li>
+      </ul>
+
       <div
         className={`hamburger ${active ? "active" : ""}`}
         onClick={toggleHamburger}
